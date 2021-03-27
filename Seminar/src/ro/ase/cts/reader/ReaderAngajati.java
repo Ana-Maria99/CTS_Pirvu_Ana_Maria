@@ -34,9 +34,5 @@ public class ReaderAngajati implements ReaderAplicant {
 		return angajati;
 	}
 
-	@Override
-	public List<Aplicant> readAplicants(String file) throws FileNotFoundException {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 }

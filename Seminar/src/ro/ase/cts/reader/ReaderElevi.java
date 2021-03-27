@@ -11,7 +11,7 @@ import ro.ase.cts.clase.Elev;
 
 public class ReaderElevi implements ReaderAplicant{
 
-	public static List<Aplicant> readAplicanti(String file) throws FileNotFoundException {
+	public List<Aplicant> readAplicanti(String file) throws FileNotFoundException {
 		Scanner input2 = new Scanner(new File(file));
 		input2.useDelimiter(",|\n");
 		List<Aplicant> elevi = new ArrayList<Aplicant>();
@@ -35,10 +35,6 @@ public class ReaderElevi implements ReaderAplicant{
 		return elevi;
 	}
 
-	@Override
-	public List<Aplicant> readAplicants(String file) throws FileNotFoundException {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 }

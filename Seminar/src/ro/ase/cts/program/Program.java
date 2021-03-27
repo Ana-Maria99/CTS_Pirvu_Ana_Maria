@@ -11,7 +11,7 @@ import ro.ase.cts.reader.ReaderStudent;
 public class Program {
 	
 	public static List<Aplicant> citireAplicanti(String numeFisier, ReaderAplicant readerAplicant) throws FileNotFoundException{
-		return readerAplicant.readAplicants(numeFisier);
+		return readerAplicant.readAplicanti(numeFisier);
 	}
 	
 	public static void main(String[] args) {

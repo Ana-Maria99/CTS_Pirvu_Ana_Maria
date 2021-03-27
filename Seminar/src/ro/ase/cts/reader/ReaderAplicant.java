@@ -9,7 +9,7 @@ import java.util.List;
 import ro.ase.cts.clase.Aplicant;
 
 public interface ReaderAplicant {
-	List<Aplicant> readAplicants(String file) throws FileNotFoundException;
+	List<Aplicant> readAplicanti(String file) throws FileNotFoundException;
 		
 
 }

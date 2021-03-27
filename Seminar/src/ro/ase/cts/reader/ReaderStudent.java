@@ -12,7 +12,7 @@ import ro.ase.cts.clase.Student;
 public class ReaderStudent implements ReaderAplicant{
 
 
-	public static List<Aplicant> readAplicanti(String file) throws FileNotFoundException, NumberFormatException {
+	public List<Aplicant> readAplicanti(String file) throws FileNotFoundException, NumberFormatException {
 		Scanner input = new Scanner(new File(file));
 		input.useDelimiter(",|\n");
 		List<Aplicant> studenti = new ArrayList<Aplicant>();
@@ -35,10 +35,5 @@ public class ReaderStudent implements ReaderAplicant{
 		return studenti;
 	}
 
-	@Override
-	public List<Aplicant> readAplicants(String file) throws FileNotFoundException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 }
