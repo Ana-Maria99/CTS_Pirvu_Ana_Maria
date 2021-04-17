@@ -7,4 +7,10 @@ public class AdapterCrediteClasa extends Leasing implements CreditAbstract {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public void oferaCredit() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
