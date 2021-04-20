@@ -1,0 +1,19 @@
+package ro.ase.cts.proxy.program;
+
+import ro.ase.cts.proxy.clase.OperatorRezervare;
+import ro.ase.cts.proxy.clase.ProxyRezervare;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		OperatorRezervare operator=new OperatorRezervare("Urban");
+		operator.rezerva(2);
+		
+		ProxyRezervare proxy=new ProxyRezervare(operator, 4);
+		proxy.rezerva(3);
+		proxy.rezerva(6);
+	}
+
+}
