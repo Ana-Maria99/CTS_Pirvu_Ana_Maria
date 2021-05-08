@@ -6,15 +6,12 @@ import java.util.List;
 public class ManagerComenzi {
 	private List<ComandaAbstracta> listaComenzi;
 
-	public ManagerComenzi(List<ComandaAbstracta> listaComenzi) {
+	public ManagerComenzi() {
 		super();
 		this.listaComenzi = new ArrayList<ComandaAbstracta>();
 	}
 	
-	public ManagerComenzi() {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	public void invocaComanda(ComandaAbstracta comanda) {
 		listaComenzi.add(comanda);
 	}
