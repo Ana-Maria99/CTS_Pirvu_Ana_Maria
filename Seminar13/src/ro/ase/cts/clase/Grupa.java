@@ -40,7 +40,7 @@ public class Grupa {
             }
         }
         return studenti.size()/nrRestantieri;
-    }
+    }}
 
 	public List<IStudent> getStudenti() {
 		return studenti;

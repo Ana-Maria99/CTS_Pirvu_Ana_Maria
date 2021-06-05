@@ -40,5 +40,21 @@ public class StudentTests {
 		assertEquals(nota, student.getNota(0));
 		
 	}
+	
+	@Test
+	public void testDimensiuneLista() {
+		Student student=new Student();
+		student.adaugaNota(10);
+		student.adaugaNota(9);
+		assertEquals(2, student.getNote().size());
+	}
+	
+	@Test
+	public void testCalculeazaMediaCorect() {
+		Student student=new Student();
+		student.adaugaNota(10);
+		student.adaugaNota(9);
+		assertEquals(9.5f, student.calculeazaMedie(), 0.1);
+	}
 
 }
