@@ -9,15 +9,30 @@ public class Grupa {
     private int nrGrupa;
 
     public Grupa(int nrGrupa){
-    	if(nrGrupa>=1000 && nrGrupa<=1100) {
-        this.nrGrupa=nrGrupa;
-        studenti=new ArrayList<>();}
-    	else{
-        	throw new IllegalArgumentException();
-        }
+    	if(nrGrupa>=1000&&nrGrupa<=1100) {
+    		this.nrGrupa=nrGrupa;
+    		studenti=new ArrayList<>();
+    	} else {
+    		throw new IllegalArgumentException();
+    	}
+        
     }
+    
+    
 
-    public void importaStudenti(List<IStudent> studenti){
+    public List<IStudent> getStudenti() {
+		return studenti;
+	}
+
+
+
+	public int getNrGrupa() {
+		return nrGrupa;
+	}
+
+
+
+	public void importaStudenti(List<IStudent> studenti){
         this.studenti.addAll(studenti);
     }
 
@@ -33,32 +48,16 @@ public class Grupa {
     }
 
     public float getPromovabilitate(){
+    	if(studenti.size()==0) {
+    		throw new IndexOutOfBoundsException();
+    	}
         int nrRestantieri=0;
         for(IStudent student:studenti){
             if(student.areRestante()){
                 nrRestantieri++;
             }
         }
-        return studenti.size()/nrRestantieri;
-    }}
-
-	public List<IStudent> getStudenti() {
-		return studenti;
-	}
-
-	public void setStudenti(List<IStudent> studenti) {
-		this.studenti = studenti;
-	}
-
-	public int getNrGrupa() {
-		return nrGrupa;
-	}
-
-	public void setNrGrupa(int nrGrupa) {
-		this.nrGrupa = nrGrupa;
-	}
-    
-    
-    
+        return (float)(studenti.size()-nrRestantieri)/studenti.size();
+    }
     
 }
